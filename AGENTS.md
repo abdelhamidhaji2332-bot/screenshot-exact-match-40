@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Interactive sensor simulation architecture
+
+- Keep the HC-SR04 measurement formulas and experiment constants in the framework-free `src/game/sensor-model.ts` module, with its nearby numerical tests, so 3D rendering and controls stay consistent.
+- Keep the WebGL view isolated behind the root route's client-only rendering and read scene colors from shared semantic CSS tokens, so server rendering, application theming, and Three.js visuals remain compatible.
